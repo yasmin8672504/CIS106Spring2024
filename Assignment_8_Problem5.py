@@ -2,7 +2,6 @@
 
 import random
 
-# Dictionary containing states and their capitals
 states_capitals = {
     "Alabama": "Montgomery",
     "Alaska": "Juneau",
@@ -56,12 +55,10 @@ states_capitals = {
     "Wyoming": "Cheyenne",
 }
 
-# Initialize counters for correct and incorrect responses
 correct_answers = 0
 incorrect_answers = 0
 
 
-# Quiz the user
 print("Welcome to the Capital Quiz!")
 print("Enter the capital of each state. Type 'exit' to quit.")
 
@@ -69,21 +66,16 @@ states = list(states_capitals.keys())
 random.shuffle(states)
 
 
-# Loop through each state in the dictionary
 for state in states:
-    # Display the state name
     print(f"\nWhat is the capital of {state} ?")
-    # Get the user's input
     user_input = input("Enter the capital: ")
     
     user_input_lower = user_input.lower()
     correct_capital_lower = states_capitals[state].lower()
 
-    # Check if the user wants to exit
     if user_input.lower() == "exit":
         break
     
-    # Check if the user's input matches the correct capital
     if user_input_lower == correct_capital_lower:
         print("Correct!")
         correct_answers += 1
@@ -91,7 +83,6 @@ for state in states:
         print(f"Incorrect. The capital of {state} is {states_capitals[state]}.")
         incorrect_answers += 1
 
-# Display the final score
 print("\nQuiz Summary:")
 print(f"Correct answers: {correct_answers} ")
 print(f"Incorrect answers: {incorrect_answers} ")
