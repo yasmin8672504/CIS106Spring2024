@@ -2,7 +2,6 @@ import json
 import urllib.request
 
 def get_articles(month, year):
-    """Fetches and displays the top 1000 most visited articles for a given month and year."""
     base_url = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/"
     endpoint = f"en.wikipedia.org/all-access/{year}/{month}/all-days"
     url = base_url + endpoint
