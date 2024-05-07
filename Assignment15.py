@@ -1,6 +1,14 @@
 import tkinter as tk
 import random
 
+# This is a simple "Rock, Paper, Scissors" game.
+# The game allows the user to select one of the three options: rock, paper, or scissors, by choosing from a dropdown menu. 
+# Once the user makes their choice and clicks the "Play" button, the computer randomly selects one of the options as well. 
+# The winner is determined based on the classic rules of the game: Rock beats scissors, Scissors beats paper, and Paper beats rock
+# The winner is displayed in the result label below the play button. If it's a tie, the result label will indicate a tie.
+# The user can keep playing by pressing play.
+# The game ends when the window is closed. 
+
 # Function to determine the winner
 def determine_winner(user_choice):
     # Dictionary to map choices to their index
